@@ -1,4 +1,5 @@
 import RootProviders from "@/components/providers/RootProviders";
+import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -26,6 +27,7 @@ export default function RootLayout({
         }}
       >
         <body className={inter.className}>
+          <Toaster richColors position="bottom-right" />
           <RootProviders>{children}</RootProviders>
         </body>
       </html>
