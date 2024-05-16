@@ -22,7 +22,7 @@ export const Currencies = [
   {
     value: "NPR",
     label: "₹ Rupee",
-    locale: "ne-NP",
+    locale: "en-US",
   },
 ];
 
