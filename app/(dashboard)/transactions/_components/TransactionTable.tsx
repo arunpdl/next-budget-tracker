@@ -144,7 +144,7 @@ function TransactionTable({ from, to }: Props) {
       fetch(
         `/api/transactions-history?from=${DateToUTCDate(
           from
-        )}&to=${DateToUTCDate(to)}`
+        ).toISOString()}&to=${DateToUTCDate(to).toISOString()}`
       ).then((res) => res.json()),
   });
 
