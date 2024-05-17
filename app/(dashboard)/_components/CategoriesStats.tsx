@@ -22,9 +22,9 @@ function CategoriesStats({ userSettings, from, to }: Props) {
     queryKey: ["overview", "stats", "categories", from, to],
     queryFn: () =>
       fetch(
-        `/api/stats/categories?from=${DateToUTCDate(from)}&to=${DateToUTCDate(
-          to
-        )}`
+        `/api/stats/categories?from=${DateToUTCDate(
+          from
+        ).toISOString()}&to=${DateToUTCDate(to).toISOString()}`
       ).then((res) => res.json()),
   });
 

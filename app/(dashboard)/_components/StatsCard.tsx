@@ -21,7 +21,9 @@ function StatsCard({ userSettings, from, to }: Props) {
     queryKey: ["overview", "stats", from, to],
     queryFn: () =>
       fetch(
-        `/api/stats/balance?from=${DateToUTCDate(from)}&to=${DateToUTCDate(to)}`
+        `/api/stats/balance?from=${DateToUTCDate(
+          from
+        ).toISOString()}&to=${DateToUTCDate(to).toISOString()}`
       ).then((res) => res.json()),
   });
 
